@@ -6,6 +6,7 @@
 package deliverable1;
 
 import deliverable1.dependencies.QuestionPool;
+import deliverable1.dependencies.SEI;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -18,6 +19,7 @@ public class Server extends Thread{
     Boolean running = true;
     ArrayList<ClientHandler> clientList = new ArrayList();
     QuestionPool qPool = new QuestionPool();
+    SEI sei = new SEI();
     
     Server(){
         
