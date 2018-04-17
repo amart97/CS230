@@ -18,6 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -32,11 +33,13 @@ public class FacultyFrame extends javax.swing.JFrame {
     Boolean valid;
     int qNum = 0;
     int timesCreated = 0;
+    boolean noMore = false;
     
     public FacultyFrame() {
         initComponents();
         valid = false;
         successLabel.setVisible(false);
+        successSubQLabel.setVisible(false);
         QPoolPanel.setVisible(false);
         
         try{
@@ -69,13 +72,14 @@ public class FacultyFrame extends javax.swing.JFrame {
         viewResultsPanel = new javax.swing.JButton();
         QPoolPanel = new javax.swing.JPanel();
         qPoolListPanel = new javax.swing.JPanel();
+        submitSelectedQBtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         qPoolList = new javax.swing.JList<>();
-        submitSelectedQBtn = new javax.swing.JButton();
+        successSubQLabel = new javax.swing.JLabel();
         createQPanel = new javax.swing.JPanel();
         qTxtLabel = new javax.swing.JLabel();
         qTextField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        qTypeLabel = new javax.swing.JLabel();
         scaledRespRadioBtn = new javax.swing.JRadioButton();
         freeRespRadioBtn = new javax.swing.JRadioButton();
         submitQBtn = new javax.swing.JButton();
@@ -95,8 +99,6 @@ public class FacultyFrame extends javax.swing.JFrame {
 
         viewResultsPanel.setText("View Results");
 
-        jScrollPane1.setViewportView(qPoolList);
-
         submitSelectedQBtn.setText("Submit Question Choices");
         submitSelectedQBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,30 +106,37 @@ public class FacultyFrame extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane1.setViewportView(qPoolList);
+
+        successSubQLabel.setText("Success!");
+
         javax.swing.GroupLayout qPoolListPanelLayout = new javax.swing.GroupLayout(qPoolListPanel);
         qPoolListPanel.setLayout(qPoolListPanelLayout);
         qPoolListPanelLayout.setHorizontalGroup(
             qPoolListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(qPoolListPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(qPoolListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, qPoolListPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(submitSelectedQBtn)))
+                    .addGroup(qPoolListPanelLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(successSubQLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(submitSelectedQBtn))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 586, Short.MAX_VALUE))
                 .addContainerGap())
         );
         qPoolListPanelLayout.setVerticalGroup(
             qPoolListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(qPoolListPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(submitSelectedQBtn))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(qPoolListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(submitSelectedQBtn)
+                    .addComponent(successSubQLabel)))
         );
 
         qTxtLabel.setText("Question Text");
 
-        jLabel1.setText("Question Type");
+        qTypeLabel.setText("Question Type");
 
         qTypeGroup.add(scaledRespRadioBtn);
         scaledRespRadioBtn.setText("Scaled Response");
@@ -158,7 +167,7 @@ public class FacultyFrame extends javax.swing.JFrame {
                             .addGroup(createQPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(submitQBtn)
                                 .addComponent(scaledRespRadioBtn)
-                                .addComponent(jLabel1)
+                                .addComponent(qTypeLabel)
                                 .addComponent(qTxtLabel)
                                 .addGroup(createQPanelLayout.createSequentialGroup()
                                     .addComponent(freeRespRadioBtn)
@@ -177,7 +186,7 @@ public class FacultyFrame extends javax.swing.JFrame {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(qTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jLabel1)
+                    .addComponent(qTypeLabel)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(scaledRespRadioBtn)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -204,11 +213,8 @@ public class FacultyFrame extends javax.swing.JFrame {
         );
         QPoolPanelLayout.setVerticalGroup(
             QPoolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(QPoolPanelLayout.createSequentialGroup()
-                .addGroup(QPoolPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(qPoolListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(createQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 71, Short.MAX_VALUE))
+            .addComponent(createQPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(qPoolListPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         selQBtn.setText("Select Questions for SEI");
@@ -294,15 +300,24 @@ public class FacultyFrame extends javax.swing.JFrame {
 
     private void selQBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selQBtnActionPerformed
         // TODO add your handling code here:
-        qPoolListPanel.setVisible(true);
+        if(!noMore) qPoolListPanel.setVisible(true);
         QPoolPanel.setVisible(true);
         createQPanel.setVisible(false);
         
         outWriter.println("/getq,");
+        outWriter.flush();
     }//GEN-LAST:event_selQBtnActionPerformed
 
     private void submitSelectedQBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitSelectedQBtnActionPerformed
         // TODO add your handling code here:
+        String out = "";
+        if(qPoolList.getSelectedValuesList().size() <= 5 && qPoolList.getSelectedValuesList().size() > 0) {
+            for(String s : qPoolList.getSelectedValuesList()) {
+                out += s + ";";
+            }
+            outWriter.println("/addSEI;" + out);
+            outWriter.flush();
+        }
     }//GEN-LAST:event_submitSelectedQBtnActionPerformed
 
     /**
@@ -360,13 +375,40 @@ public class FacultyFrame extends javax.swing.JFrame {
             }
         }
         
+        public void addToList(String[] str){
+            DefaultListModel listmodel = new DefaultListModel();
+
+            try{
+                for(int i=1; i<str.length; i++){
+                    listmodel.addElement(str[i]);
+                }
+                qPoolList.setModel(listmodel);
+                qPoolList.setVisible(true);
+            }catch(ArrayIndexOutOfBoundsException e){} 
+        }
+        
         private void processCommand(String inString){
-            String[] stringarr = inString.split(",");
-            if(stringarr[0].equals("/addq")) {
+            if(inString.startsWith("/addq")) {
+                String[] stringarr = inString.split(",");
+            
                 if(stringarr[4].equals("true")) successLabel.setText("SUCCESS");
                 else successLabel.setText("FAILURE - TRY AGAIN");
                 successLabel.setVisible(true);
             } 
+            else if(inString.startsWith("/returnQList")) {
+                addToList(inString.split(";"));
+            }
+            else if(inString.startsWith("/addSEI")) {
+                successSubQLabel.setVisible(true);
+                try {
+                    TimeUnit.SECONDS.sleep(5); //wait before hiding panel.
+                } catch(InterruptedException e) {}
+                qPoolList.setVisible(false);
+                submitSelectedQBtn.setVisible(false);
+                successSubQLabel.setVisible(false);
+                jScrollPane1.setVisible(false);
+                noMore = true;
+            }
         }
     }
 
@@ -377,18 +419,19 @@ public class FacultyFrame extends javax.swing.JFrame {
     private javax.swing.JButton createQBtn;
     private javax.swing.JPanel createQPanel;
     private javax.swing.JRadioButton freeRespRadioBtn;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<String> qPoolList;
     private javax.swing.JPanel qPoolListPanel;
     private javax.swing.JTextField qTextField;
     private javax.swing.JLabel qTxtLabel;
     private javax.swing.ButtonGroup qTypeGroup;
+    private javax.swing.JLabel qTypeLabel;
     private javax.swing.JRadioButton scaledRespRadioBtn;
     private javax.swing.JButton selQBtn;
     private javax.swing.JButton submitQBtn;
     private javax.swing.JButton submitSelectedQBtn;
     private javax.swing.JLabel successLabel;
+    private javax.swing.JLabel successSubQLabel;
     private javax.swing.JButton viewResultsPanel;
     // End of variables declaration//GEN-END:variables
 }

@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 /**
  *
@@ -52,7 +53,11 @@ public class ClientHandler extends Thread{
     
     private void processInput(String inputstring){
         System.out.println("Processing Command");
-        String[] stringarray = inputstring.split(",");
+        String[] stringarray;
+        if(inputstring.startsWith("/addSEI")) {
+            stringarray = inputstring.split(";");
+        }
+        else stringarray = inputstring.split(",");
         if(stringarray[0].equals("/login")) {
             if(stringarray.length != 3) {
                 outWriter.println("/login,false,false");
@@ -89,11 +94,28 @@ public class ClientHandler extends Thread{
                 outWriter.flush();
             }
             else {
-                server.qPool.addQuestion(stringarray[3], stringarray[1]);
-                
+                server.qPool.addQuestion(stringarray[3], stringarray[1]); //adds to QPool
+                server.sei.addQuestion(stringarray[1]); //adds to SEI 
                 outWriter.println("/addq," + stringarray[3] + "," + stringarray[2] + "," + stringarray[1] + "," + "true");
                 outWriter.flush();
             }
+        }
+        else if(stringarray[0].equals("/getq")) {
+            ArrayList<String> str = server.qPool.getAllQuestions();
+            String toSend = "/returnQList;";
+            for(String s : str) {
+                toSend += s + ";";
+            }
+            
+            outWriter.println(toSend);
+            outWriter.flush();
+        }
+        else if(stringarray[0].equals("/addSEI")) {
+            for(int i = 1; i < stringarray.length; i++) {
+                server.sei.addQuestion(stringarray[i]);
+            }
+            outWriter.println("/addSEI,success");
+            outWriter.flush();
         }
     }
 }
