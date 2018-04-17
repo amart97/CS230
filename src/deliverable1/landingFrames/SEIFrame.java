@@ -194,7 +194,7 @@ public class SEIFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         jPanel2.setVisible(true);
-        question1.setText(questions.get(1));
+        question1.setText(questions.get(0));
         
     }//GEN-LAST:event_beginBtnActionPerformed
 
@@ -260,6 +260,7 @@ public class SEIFrame extends javax.swing.JFrame {
             String[] stringarr = inString.split(";");
             
             for(int i = 1; i < stringarr.length; i++) {
+                System.err.println("Adding to Questions Array: " + stringarr[i]);
                 questions.add(stringarr[i]);
             }
             
