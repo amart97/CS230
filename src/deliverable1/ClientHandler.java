@@ -135,5 +135,17 @@ public class ClientHandler extends Thread{
             outWriter.println("/disableQ;" + out);
             outWriter.flush();
         }
+        else if(stringarray[0].equals("/pullSEI")) {
+            System.err.println("Pulling SEI Qs");
+            
+            ArrayList<String>list = server.sei.getSEI();
+            String out = "";
+            for(String s : list) {
+                out += s + ";";
+            }
+            
+            outWriter.println("/sendingQ;" + out);
+            outWriter.flush();
+        }
     }
 }
