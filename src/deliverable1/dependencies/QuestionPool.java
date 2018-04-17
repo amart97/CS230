@@ -17,7 +17,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class QuestionPool {
-        static final String FILEPATH = "C:\\Users\\alexm\\Desktop\\LogInMockUps\\src\\deliverable1\\dependencies\\rawPool.txt";
+        static final String FILEPATH = "/Users/seankreps/NetBeansProjects/CS230/src/deliverable1/dependencies/rawPool.txt";
         File f;
         Scanner scanner;
 	ArrayList<String> dictionary = new ArrayList<String>();
