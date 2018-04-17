@@ -25,6 +25,7 @@ public class SEI {
     //store question pool questions here. 
     public void addQuestion(String q) {
         this.SEI.add(q);
+        System.err.println(SEI);
     }
     
     public ArrayList<String> getSEI() {

@@ -46,15 +46,18 @@ public class QuestionPool {
 		dictionary.add(question);
 	}
 	
-	public void deleteQuestion(Integer questionNumber) {
-            if(questionNumber < dictionary.size() && questionNumber >= 0) {
-                deleted.add(dictionary.get(questionNumber));
-                dictionary.remove(questionNumber);
-            }
+	public void deleteQuestion(String question) {
+                System.err.println("in deleteQuestion");
+                dictionary.remove(question);
+            
 
 	}
+        
+        public ArrayList<String> getDeletedQuestions() {
+            return deleted;
+        }
 	
-	public String getQuestion(Integer questionNumber) {
+	public String getQuestion(int questionNumber) {
             if(questionNumber < dictionary.size() && questionNumber >= 0) {
 		String question = dictionary.get(questionNumber);
 		return question;

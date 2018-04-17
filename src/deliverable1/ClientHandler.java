@@ -52,12 +52,14 @@ public class ClientHandler extends Thread{
     }
     
     private void processInput(String inputstring){
-        System.out.println("Processing Command");
+        System.err.println("CH Processing Command: " + inputstring);
         String[] stringarray;
-        if(inputstring.startsWith("/addSEI")) {
+        if(inputstring.startsWith("/addSEI") || inputstring.startsWith("/disableQ")) {
+            System.err.println("Split on ;");
             stringarray = inputstring.split(";");
         }
         else stringarray = inputstring.split(",");
+        
         if(stringarray[0].equals("/login")) {
             if(stringarray.length != 3) {
                 outWriter.println("/login,false,false");
@@ -112,9 +114,24 @@ public class ClientHandler extends Thread{
         }
         else if(stringarray[0].equals("/addSEI")) {
             for(int i = 1; i < stringarray.length; i++) {
+                System.err.println("Adding to SEI");
                 server.sei.addQuestion(stringarray[i]);
             }
             outWriter.println("/addSEI,success");
+            outWriter.flush();
+        }
+        else if(stringarray[0].equals("/disableQ")) {
+            System.err.println("In disable Q");
+            for(int i = 1; i < stringarray.length; i++) {
+                server.qPool.deleteQuestion(stringarray[i]);
+            }
+            ArrayList<String>list = server.qPool.getAllQuestions();
+            String out = "";
+            for(String s : list) {
+                out += s + ";";
+            }
+            System.err.println("out disable = " + out);
+            outWriter.println("/disableQ;" + out);
             outWriter.flush();
         }
     }
