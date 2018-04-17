@@ -123,6 +123,7 @@ public class ClientHandler extends Thread{
         else if(stringarray[0].equals("/disableQ")) {
             System.err.println("In disable Q");
             for(int i = 1; i < stringarray.length; i++) {
+                System.err.println("About to supposedly delete: " + stringarray[i]);
                 server.qPool.deleteQuestion(stringarray[i]);
             }
             ArrayList<String>list = server.qPool.getAllQuestions();
