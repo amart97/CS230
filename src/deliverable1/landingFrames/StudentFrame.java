@@ -75,6 +75,11 @@ public class StudentFrame extends javax.swing.JFrame {
         selectClassLabel.setText("Select Class to Take SEI");
 
         selectClassBtn.setText("Select");
+        selectClassBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectClassBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout studentPanelLayout = new javax.swing.GroupLayout(studentPanel);
         studentPanel.setLayout(studentPanelLayout);
@@ -129,6 +134,11 @@ public class StudentFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void selectClassBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectClassBtnActionPerformed
+        // TODO add your handling code here:
+        new SEIFrame().setVisible(true);
+    }//GEN-LAST:event_selectClassBtnActionPerformed
 
     /**
      * @param args the command line arguments

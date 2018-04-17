@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 /**
  *
@@ -51,8 +52,14 @@ public class ClientHandler extends Thread{
     }
     
     private void processInput(String inputstring){
-        System.out.println("Processing Command");
-        String[] stringarray = inputstring.split(",");
+        System.err.println("CH Processing Command: " + inputstring);
+        String[] stringarray;
+        if(inputstring.startsWith("/addSEI") || inputstring.startsWith("/disableQ")) {
+            System.err.println("Split on ;");
+            stringarray = inputstring.split(";");
+        }
+        else stringarray = inputstring.split(",");
+        
         if(stringarray[0].equals("/login")) {
             if(stringarray.length != 3) {
                 outWriter.println("/login,false,false");
@@ -89,11 +96,56 @@ public class ClientHandler extends Thread{
                 outWriter.flush();
             }
             else {
-                server.qPool.addQuestion(stringarray[3], stringarray[1]);
-                
+                server.qPool.addQuestion(stringarray[3], stringarray[1]); //adds to QPool
+                server.sei.addQuestion(stringarray[1]); //adds to SEI 
                 outWriter.println("/addq," + stringarray[3] + "," + stringarray[2] + "," + stringarray[1] + "," + "true");
                 outWriter.flush();
             }
+        }
+        else if(stringarray[0].equals("/getq")) {
+            ArrayList<String> str = server.qPool.getAllQuestions();
+            String toSend = "/returnQList;";
+            for(String s : str) {
+                toSend += s + ";";
+            }
+            
+            outWriter.println(toSend);
+            outWriter.flush();
+        }
+        else if(stringarray[0].equals("/addSEI")) {
+            for(int i = 1; i < stringarray.length; i++) {
+                System.err.println("Adding to SEI");
+                server.sei.addQuestion(stringarray[i]);
+            }
+            outWriter.println("/addSEI,success");
+            outWriter.flush();
+        }
+        else if(stringarray[0].equals("/disableQ")) {
+            System.err.println("In disable Q");
+            for(int i = 1; i < stringarray.length; i++) {
+                System.err.println("About to supposedly delete: " + stringarray[i]);
+                server.qPool.deleteQuestion(stringarray[i]);
+            }
+            ArrayList<String>list = server.qPool.getAllQuestions();
+            String out = "";
+            for(String s : list) {
+                out += s + ";";
+            }
+            System.err.println("out disable = " + out);
+            outWriter.println("/disableQ;" + out);
+            outWriter.flush();
+        }
+        else if(stringarray[0].equals("/pullSEI")) {
+            System.err.println("Pulling SEI Qs");
+            
+            ArrayList<String>list = server.sei.getSEI();
+            String out = "";
+            for(String s : list) {
+                out += s + ";";
+            }
+            
+            outWriter.println("/sendingQ;" + out);
+            outWriter.flush();
         }
     }
 }

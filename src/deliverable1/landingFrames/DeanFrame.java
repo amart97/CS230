@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 import javax.swing.DefaultListModel;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
@@ -31,10 +32,14 @@ public class DeanFrame extends javax.swing.JFrame {
     ArrayList<JComponent> inputs = new ArrayList();
     Boolean valid;
     int qNum = 0;
+    Boolean noMore = false;
     
     public DeanFrame() {
         initComponents();
         valid = false;
+        qListPane.setVisible(false);
+        successLabel.setVisible(false);
+        subSelectionBtn.setVisible(false);
         
         try{
             socket = new Socket("localhost",32345);
@@ -59,21 +64,35 @@ public class DeanFrame extends javax.swing.JFrame {
         adminPanel = new javax.swing.JPanel();
         adminWelcomeTxtLabel = new javax.swing.JLabel();
         selectQBtn = new javax.swing.JButton();
-        questionListPane = new javax.swing.JScrollPane();
-        questionListTxt = new javax.swing.JTextArea();
         viewResultsBtn = new javax.swing.JButton();
+        qListPane = new javax.swing.JScrollPane();
+        qListBox = new javax.swing.JList<>();
+        subSelectionBtn = new javax.swing.JButton();
+        successLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         adminWelcomeTxtLabel.setText("College of Monongalia County SEI System - Fine Arts College Dean");
 
         selectQBtn.setText("Select Questions for SEI");
-
-        questionListTxt.setColumns(20);
-        questionListTxt.setRows(5);
-        questionListPane.setViewportView(questionListTxt);
+        selectQBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectQBtnActionPerformed(evt);
+            }
+        });
 
         viewResultsBtn.setText("View Results");
+
+        qListPane.setViewportView(qListBox);
+
+        subSelectionBtn.setText("Submit Selected Questions");
+        subSelectionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subSelectionBtnActionPerformed(evt);
+            }
+        });
+
+        successLabel.setText("Success!");
 
         javax.swing.GroupLayout adminPanelLayout = new javax.swing.GroupLayout(adminPanel);
         adminPanel.setLayout(adminPanelLayout);
@@ -81,31 +100,38 @@ public class DeanFrame extends javax.swing.JFrame {
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addComponent(adminWelcomeTxtLabel)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(successLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(subSelectionBtn))
                     .addGroup(adminPanelLayout.createSequentialGroup()
-                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(selectQBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
-                            .addComponent(viewResultsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(questionListPane, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(adminWelcomeTxtLabel)
+                            .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(selectQBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                                .addComponent(viewResultsBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(qListPane, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         adminPanelLayout.setVerticalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(adminWelcomeTxtLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(adminPanelLayout.createSequentialGroup()
+                        .addComponent(adminWelcomeTxtLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(selectQBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(viewResultsBtn)
-                        .addContainerGap())
-                    .addComponent(questionListPane, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)))
+                        .addComponent(viewResultsBtn))
+                    .addComponent(qListPane, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(subSelectionBtn)
+                    .addComponent(successLabel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,6 +153,28 @@ public class DeanFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void selectQBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectQBtnActionPerformed
+        if(!noMore) {
+            qListPane.setVisible(true);
+            subSelectionBtn.setVisible(true);
+            outWriter.println("/getq,");
+            outWriter.flush();
+        }
+    }//GEN-LAST:event_selectQBtnActionPerformed
+
+    private void subSelectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subSelectionBtnActionPerformed
+        // TODO add your handling code here:
+        String out = "";
+        if(qListBox.getSelectedValuesList().size() <= 5 && qListBox.getSelectedValuesList().size() > 0) {
+            for(String s : qListBox.getSelectedValuesList()) {
+                out += s + ";";
+            }
+            outWriter.println("/addSEI;" + out);
+            outWriter.flush();
+        }
+      
+    }//GEN-LAST:event_subSelectionBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,19 +231,42 @@ public class DeanFrame extends javax.swing.JFrame {
             }
         }
         
+        public void addToList(String[] str){
+            DefaultListModel listmodel = new DefaultListModel();
+
+            try{
+                for(int i=1; i<str.length; i++){
+                    listmodel.addElement(str[i]);
+                }
+                qListBox.setModel(listmodel);
+                qListBox.setVisible(true);
+            }catch(ArrayIndexOutOfBoundsException e){} 
+        }
+        
         private void processCommand(String inString){
-            String[] stringarr = inString.split(",");
-            
+            if(inString.startsWith("/returnQList")) addToList(inString.split(";"));
+            else if(inString.startsWith("/addSEI"))
+                successLabel.setVisible(true);
+                try {
+                    TimeUnit.SECONDS.sleep(5); //wait before hiding panel.
+                } catch(InterruptedException e) {}
+                qListBox.setVisible(false);
+                subSelectionBtn.setVisible(false);
+                successLabel.setVisible(false);
+                qListPane.setVisible(false);
+                noMore = true;
         }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel adminPanel;
     private javax.swing.JLabel adminWelcomeTxtLabel;
+    private javax.swing.JList<String> qListBox;
+    private javax.swing.JScrollPane qListPane;
     private javax.swing.ButtonGroup qTypeGroup;
-    private javax.swing.JScrollPane questionListPane;
-    private javax.swing.JTextArea questionListTxt;
     private javax.swing.JButton selectQBtn;
+    private javax.swing.JButton subSelectionBtn;
+    private javax.swing.JLabel successLabel;
     private javax.swing.JButton viewResultsBtn;
     // End of variables declaration//GEN-END:variables
 }
