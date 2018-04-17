@@ -9,67 +9,63 @@ package deliverable1.dependencies;
  *
  * @author alexm
  */
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.ArrayList;
 import java.util.Set;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.util.Scanner;
+import java.io.File;
 import java.io.IOException;
 
 public class QuestionPool {
         static final String FILEPATH = "C:\\Users\\alexm\\Desktop\\LogInMockUps\\src\\deliverable1\\dependencies\\rawPool.txt";
-        FileReader fr;
-        BufferedReader br;
-	Map<String, String> dictionary = new HashMap<String, String>();
+        File f;
+        Scanner scanner;
+	ArrayList<String> dictionary = new ArrayList<String>();
+        ArrayList<String> deleted = new ArrayList<String>();
 	
+        public QuestionPool() {
+            populatePool();
+        }
+        
         public void populatePool() {
             int i = 1;
             String currLine;
             
             try{
-                fr = new FileReader(FILEPATH);
-                br = new BufferedReader(fr);
+                f = new File(FILEPATH);
+                scanner = new Scanner(f);
           
-                while((currLine = br.readLine()) != null) {
-                    dictionary.put(Integer.toString(i), currLine);
+                while(scanner.hasNext()) {
+                    dictionary.add(scanner.nextLine());
                     i++;
                 }
             } catch(IOException e) {}
         }
         
 	public void addQuestion(String questionNumber, String question) {
-		dictionary.put(questionNumber, question);
+		dictionary.add(question);
 	}
 	
-	public void deleteQuestion(String questionNumber) {
-		dictionary.remove(questionNumber);
+	public void deleteQuestion(String question) {
+                System.err.println("in deleteQuestion");
+                dictionary.remove(question);
+            
+
 	}
+        
+        public ArrayList<String> getDeletedQuestions() {
+            return deleted;
+        }
 	
-	public String getQuestion(String questionNumber) {
+	public String getQuestion(int questionNumber) {
+            if(questionNumber < dictionary.size() && questionNumber >= 0) {
 		String question = dictionary.get(questionNumber);
 		return question;
+            }
+            return "-1";
 	}
-	
-	public String[] createSurvey(String[] questionNumbers, int surveySize) {
-		String[] survey = new String[surveySize];
-		for(int i = 0; i < surveySize; i++) {
-			survey[i] = dictionary.get(questionNumbers[i]);
-		}
-		return survey;
-	}
-	
-	public String[] getAllQuestionNumbers() {
-		Set<String> set = dictionary.keySet();
-		String[] questionNumbers = (String[]) set.toArray();
-		return questionNumbers;
-	}
-	
-	public String[] getAllQuestions() {
-		String[] questionNumbers = getAllQuestionNumbers();
-		String[] questions = new String[questionNumbers.length];
-		for(int i = 0; i < questionNumbers.length; i++) {
-			questions[i] = dictionary.get(questionNumbers[i]);
-		}
-		return questions;
+        
+	public ArrayList<String> getAllQuestions() {
+		return dictionary;
 	}	
 }
