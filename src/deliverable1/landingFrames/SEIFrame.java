@@ -55,51 +55,141 @@ public class SEIFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        buttonGroup7 = new javax.swing.ButtonGroup();
+        buttonGroup8 = new javax.swing.ButtonGroup();
+        buttonGroup9 = new javax.swing.ButtonGroup();
+        buttonGroup10 = new javax.swing.ButtonGroup();
+        buttonGroup11 = new javax.swing.ButtonGroup();
+        buttonGroup12 = new javax.swing.ButtonGroup();
+        buttonGroup13 = new javax.swing.ButtonGroup();
+        buttonGroup14 = new javax.swing.ButtonGroup();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        beginBtn = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
-        question1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
+        question2 = new javax.swing.JLabel();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jRadioButton10 = new javax.swing.JRadioButton();
+        question3 = new javax.swing.JLabel();
+        jRadioButton11 = new javax.swing.JRadioButton();
+        jRadioButton12 = new javax.swing.JRadioButton();
+        jRadioButton13 = new javax.swing.JRadioButton();
+        jRadioButton14 = new javax.swing.JRadioButton();
+        jRadioButton15 = new javax.swing.JRadioButton();
+        question4 = new javax.swing.JLabel();
+        jRadioButton16 = new javax.swing.JRadioButton();
+        jRadioButton17 = new javax.swing.JRadioButton();
+        jRadioButton18 = new javax.swing.JRadioButton();
+        jRadioButton19 = new javax.swing.JRadioButton();
+        jRadioButton20 = new javax.swing.JRadioButton();
+        question5 = new javax.swing.JLabel();
+        jRadioButton21 = new javax.swing.JRadioButton();
+        jRadioButton22 = new javax.swing.JRadioButton();
+        jRadioButton23 = new javax.swing.JRadioButton();
+        jRadioButton24 = new javax.swing.JRadioButton();
+        jRadioButton25 = new javax.swing.JRadioButton();
+        question6 = new javax.swing.JLabel();
+        jRadioButton26 = new javax.swing.JRadioButton();
+        jRadioButton27 = new javax.swing.JRadioButton();
+        jRadioButton28 = new javax.swing.JRadioButton();
+        jRadioButton29 = new javax.swing.JRadioButton();
+        jRadioButton30 = new javax.swing.JRadioButton();
+        question7 = new javax.swing.JLabel();
+        jRadioButton31 = new javax.swing.JRadioButton();
+        jRadioButton32 = new javax.swing.JRadioButton();
+        jRadioButton33 = new javax.swing.JRadioButton();
+        jRadioButton34 = new javax.swing.JRadioButton();
+        jRadioButton35 = new javax.swing.JRadioButton();
+        question8 = new javax.swing.JLabel();
+        jRadioButton36 = new javax.swing.JRadioButton();
+        jRadioButton37 = new javax.swing.JRadioButton();
+        jRadioButton38 = new javax.swing.JRadioButton();
+        jRadioButton39 = new javax.swing.JRadioButton();
+        jRadioButton40 = new javax.swing.JRadioButton();
+        question9 = new javax.swing.JLabel();
+        jRadioButton41 = new javax.swing.JRadioButton();
+        jRadioButton42 = new javax.swing.JRadioButton();
+        jRadioButton43 = new javax.swing.JRadioButton();
+        jRadioButton44 = new javax.swing.JRadioButton();
+        jRadioButton45 = new javax.swing.JRadioButton();
+        question10 = new javax.swing.JLabel();
+        jRadioButton46 = new javax.swing.JRadioButton();
+        jRadioButton47 = new javax.swing.JRadioButton();
+        jRadioButton48 = new javax.swing.JRadioButton();
+        jRadioButton49 = new javax.swing.JRadioButton();
+        jRadioButton50 = new javax.swing.JRadioButton();
+        question11 = new javax.swing.JLabel();
+        jRadioButton51 = new javax.swing.JRadioButton();
+        jRadioButton52 = new javax.swing.JRadioButton();
+        jRadioButton53 = new javax.swing.JRadioButton();
+        jRadioButton54 = new javax.swing.JRadioButton();
+        jRadioButton55 = new javax.swing.JRadioButton();
+        question12 = new javax.swing.JLabel();
+        jRadioButton56 = new javax.swing.JRadioButton();
+        jRadioButton57 = new javax.swing.JRadioButton();
+        jRadioButton58 = new javax.swing.JRadioButton();
+        jRadioButton59 = new javax.swing.JRadioButton();
+        jRadioButton60 = new javax.swing.JRadioButton();
+        question13 = new javax.swing.JLabel();
+        jRadioButton61 = new javax.swing.JRadioButton();
+        jRadioButton62 = new javax.swing.JRadioButton();
+        jRadioButton63 = new javax.swing.JRadioButton();
+        jRadioButton64 = new javax.swing.JRadioButton();
+        jRadioButton65 = new javax.swing.JRadioButton();
+        question14 = new javax.swing.JLabel();
+        jRadioButton66 = new javax.swing.JRadioButton();
+        jRadioButton67 = new javax.swing.JRadioButton();
+        jRadioButton68 = new javax.swing.JRadioButton();
+        jRadioButton69 = new javax.swing.JRadioButton();
+        jRadioButton70 = new javax.swing.JRadioButton();
+        FreeResponse1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        FreeResponse2 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        question1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        beginBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 3, 24)); // NOI18N
-        jLabel1.setText("Student Evaluation of Instructors");
-
-        beginBtn.setText("Begin SEI");
-        beginBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                beginBtnActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(beginBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(beginBtn))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 76, Short.MAX_VALUE)
         );
-
-        question1.setText("Question1");
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Strongly Disagree");
@@ -121,45 +211,692 @@ public class SEIFrame extends javax.swing.JFrame {
             }
         });
 
+        question2.setText("Question2");
+
+        buttonGroup2.add(jRadioButton6);
+        jRadioButton6.setText("Strongly Disagree");
+
+        buttonGroup2.add(jRadioButton7);
+        jRadioButton7.setText("Disagree");
+
+        buttonGroup2.add(jRadioButton8);
+        jRadioButton8.setText("Neutral");
+        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton8ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup2.add(jRadioButton9);
+        jRadioButton9.setText("Agree");
+
+        buttonGroup2.add(jRadioButton10);
+        jRadioButton10.setText("Strongly Agree");
+
+        question3.setText("Question3");
+
+        buttonGroup3.add(jRadioButton11);
+        jRadioButton11.setText("Strongly Disagree");
+
+        buttonGroup3.add(jRadioButton12);
+        jRadioButton12.setText("Disagree");
+
+        buttonGroup3.add(jRadioButton13);
+        jRadioButton13.setText("Neutral");
+        jRadioButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton13ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup3.add(jRadioButton14);
+        jRadioButton14.setText("Agree");
+
+        buttonGroup3.add(jRadioButton15);
+        jRadioButton15.setText("Strongly Agree");
+
+        question4.setText("Question4");
+
+        buttonGroup4.add(jRadioButton16);
+        jRadioButton16.setText("Strongly Disagree");
+
+        buttonGroup4.add(jRadioButton17);
+        jRadioButton17.setText("Disagree");
+        jRadioButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton17ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup4.add(jRadioButton18);
+        jRadioButton18.setText("Neutral");
+        jRadioButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton18ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup4.add(jRadioButton19);
+        jRadioButton19.setText("Agree");
+
+        buttonGroup4.add(jRadioButton20);
+        jRadioButton20.setText("Strongly Agree");
+
+        question5.setText("Question5");
+
+        buttonGroup5.add(jRadioButton21);
+        jRadioButton21.setText("Strongly Disagree");
+
+        buttonGroup5.add(jRadioButton22);
+        jRadioButton22.setText("Disagree");
+        jRadioButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton22ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup5.add(jRadioButton23);
+        jRadioButton23.setText("Neutral");
+        jRadioButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton23ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup5.add(jRadioButton24);
+        jRadioButton24.setText("Agree");
+
+        buttonGroup5.add(jRadioButton25);
+        jRadioButton25.setText("Strongly Agree");
+
+        question6.setText("Question6");
+
+        buttonGroup6.add(jRadioButton26);
+        jRadioButton26.setText("Strongly Disagree");
+
+        buttonGroup6.add(jRadioButton27);
+        jRadioButton27.setText("Disagree");
+        jRadioButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton27ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup6.add(jRadioButton28);
+        jRadioButton28.setText("Neutral");
+        jRadioButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton28ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup6.add(jRadioButton29);
+        jRadioButton29.setText("Agree");
+
+        buttonGroup6.add(jRadioButton30);
+        jRadioButton30.setText("Strongly Agree");
+
+        question7.setText("Question7");
+
+        buttonGroup7.add(jRadioButton31);
+        jRadioButton31.setText("Strongly Disagree");
+
+        buttonGroup7.add(jRadioButton32);
+        jRadioButton32.setText("Disagree");
+        jRadioButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton32ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup7.add(jRadioButton33);
+        jRadioButton33.setText("Neutral");
+        jRadioButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton33ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup7.add(jRadioButton34);
+        jRadioButton34.setText("Agree");
+
+        buttonGroup7.add(jRadioButton35);
+        jRadioButton35.setText("Strongly Agree");
+
+        question8.setText("Question8");
+
+        buttonGroup8.add(jRadioButton36);
+        jRadioButton36.setText("Strongly Disagree");
+
+        buttonGroup8.add(jRadioButton37);
+        jRadioButton37.setText("Disagree");
+        jRadioButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton37ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup8.add(jRadioButton38);
+        jRadioButton38.setText("Neutral");
+        jRadioButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton38ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup8.add(jRadioButton39);
+        jRadioButton39.setText("Agree");
+
+        buttonGroup8.add(jRadioButton40);
+        jRadioButton40.setText("Strongly Agree");
+
+        question9.setText("Question9");
+
+        buttonGroup9.add(jRadioButton41);
+        jRadioButton41.setText("Strongly Disagree");
+
+        buttonGroup9.add(jRadioButton42);
+        jRadioButton42.setText("Disagree");
+        jRadioButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton42ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup9.add(jRadioButton43);
+        jRadioButton43.setText("Neutral");
+        jRadioButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton43ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup9.add(jRadioButton44);
+        jRadioButton44.setText("Agree");
+
+        buttonGroup9.add(jRadioButton45);
+        jRadioButton45.setText("Strongly Agree");
+
+        question10.setText("Question10");
+
+        buttonGroup10.add(jRadioButton46);
+        jRadioButton46.setText("Strongly Disagree");
+
+        buttonGroup10.add(jRadioButton47);
+        jRadioButton47.setText("Disagree");
+        jRadioButton47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton47ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup10.add(jRadioButton48);
+        jRadioButton48.setText("Neutral");
+        jRadioButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton48ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup10.add(jRadioButton49);
+        jRadioButton49.setText("Agree");
+
+        buttonGroup10.add(jRadioButton50);
+        jRadioButton50.setText("Strongly Agree");
+
+        question11.setText("Question11");
+
+        buttonGroup11.add(jRadioButton51);
+        jRadioButton51.setText("Strongly Disagree");
+
+        buttonGroup11.add(jRadioButton52);
+        jRadioButton52.setText("Disagree");
+        jRadioButton52.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton52ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup11.add(jRadioButton53);
+        jRadioButton53.setText("Neutral");
+        jRadioButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton53ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup11.add(jRadioButton54);
+        jRadioButton54.setText("Agree");
+
+        buttonGroup11.add(jRadioButton55);
+        jRadioButton55.setText("Strongly Agree");
+
+        question12.setText("Question12");
+
+        buttonGroup12.add(jRadioButton56);
+        jRadioButton56.setText("Strongly Disagree");
+
+        buttonGroup12.add(jRadioButton57);
+        jRadioButton57.setText("Disagree");
+        jRadioButton57.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton57ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup12.add(jRadioButton58);
+        jRadioButton58.setText("Neutral");
+        jRadioButton58.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton58ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup12.add(jRadioButton59);
+        jRadioButton59.setText("Agree");
+
+        buttonGroup12.add(jRadioButton60);
+        jRadioButton60.setText("Strongly Agree");
+
+        question13.setText("Question13");
+
+        buttonGroup13.add(jRadioButton61);
+        jRadioButton61.setText("Strongly Disagree");
+
+        buttonGroup13.add(jRadioButton62);
+        jRadioButton62.setText("Disagree");
+        jRadioButton62.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton62ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup13.add(jRadioButton63);
+        jRadioButton63.setText("Neutral");
+        jRadioButton63.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton63ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup13.add(jRadioButton64);
+        jRadioButton64.setText("Agree");
+
+        buttonGroup13.add(jRadioButton65);
+        jRadioButton65.setText("Strongly Agree");
+
+        question14.setText("Question14");
+
+        buttonGroup14.add(jRadioButton66);
+        jRadioButton66.setText("Strongly Disagree");
+
+        buttonGroup14.add(jRadioButton67);
+        jRadioButton67.setText("Disagree");
+        jRadioButton67.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton67ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup14.add(jRadioButton68);
+        jRadioButton68.setText("Neutral");
+        jRadioButton68.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton68ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup14.add(jRadioButton69);
+        jRadioButton69.setText("Agree");
+
+        buttonGroup14.add(jRadioButton70);
+        jRadioButton70.setText("Strongly Agree");
+
+        FreeResponse1.setText("FreeResponse1");
+
+        FreeResponse2.setText("FreeResponse2");
+
+        question1.setText("Question1");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(question6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton1)
-                .addGap(24, 24, 24)
-                .addComponent(jRadioButton2)
-                .addGap(36, 36, 36)
-                .addComponent(jRadioButton3)
-                .addGap(32, 32, 32)
-                .addComponent(jRadioButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(jRadioButton5)
-                .addGap(24, 24, 24))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(question1, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(question3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(question2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton21)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jRadioButton22)
+                                        .addGap(34, 34, 34)
+                                        .addComponent(jRadioButton23)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jRadioButton24)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton25))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton16)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jRadioButton17)
+                                        .addGap(34, 34, 34)
+                                        .addComponent(jRadioButton18)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jRadioButton19)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton20))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton11)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jRadioButton12)
+                                        .addGap(34, 34, 34)
+                                        .addComponent(jRadioButton13)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jRadioButton14)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton15))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton6)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jRadioButton7)
+                                        .addGap(34, 34, 34)
+                                        .addComponent(jRadioButton8)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jRadioButton9)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton10)))
+                                .addGap(0, 458, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton1)
+                        .addGap(31, 31, 31)
+                        .addComponent(jRadioButton2)
+                        .addGap(29, 29, 29)
+                        .addComponent(jRadioButton3)
+                        .addGap(31, 31, 31)
+                        .addComponent(jRadioButton4)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton5)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(question1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FreeResponse1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(question14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FreeResponse2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton66)
+                                .addGap(26, 26, 26)
+                                .addComponent(jRadioButton67)
+                                .addGap(34, 34, 34)
+                                .addComponent(jRadioButton68)
+                                .addGap(31, 31, 31)
+                                .addComponent(jRadioButton69)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton70))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton61)
+                                .addGap(26, 26, 26)
+                                .addComponent(jRadioButton62)
+                                .addGap(34, 34, 34)
+                                .addComponent(jRadioButton63)
+                                .addGap(31, 31, 31)
+                                .addComponent(jRadioButton64)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton65))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton56)
+                                .addGap(26, 26, 26)
+                                .addComponent(jRadioButton57)
+                                .addGap(34, 34, 34)
+                                .addComponent(jRadioButton58)
+                                .addGap(31, 31, 31)
+                                .addComponent(jRadioButton59)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton60))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton51)
+                                .addGap(26, 26, 26)
+                                .addComponent(jRadioButton52)
+                                .addGap(34, 34, 34)
+                                .addComponent(jRadioButton53)
+                                .addGap(31, 31, 31)
+                                .addComponent(jRadioButton54)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton55))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton46)
+                                .addGap(26, 26, 26)
+                                .addComponent(jRadioButton47)
+                                .addGap(34, 34, 34)
+                                .addComponent(jRadioButton48)
+                                .addGap(31, 31, 31)
+                                .addComponent(jRadioButton49)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton50))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton41)
+                                .addGap(26, 26, 26)
+                                .addComponent(jRadioButton42)
+                                .addGap(34, 34, 34)
+                                .addComponent(jRadioButton43)
+                                .addGap(31, 31, 31)
+                                .addComponent(jRadioButton44)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton45))
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton36)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(jRadioButton37)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(jRadioButton38)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(jRadioButton39)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton40))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton31)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jRadioButton32)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(jRadioButton33)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(jRadioButton34)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton35))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton26)
+                                        .addGap(26, 26, 26)
+                                        .addComponent(jRadioButton27)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(jRadioButton28)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(jRadioButton29)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton30)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(72, 72, 72)
+                .addComponent(question1)
+                .addGap(17, 17, 17)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton1)
                     .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton3)
                     .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton3))
-                .addContainerGap(294, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(42, 42, 42)
-                    .addComponent(question1)
-                    .addContainerGap(331, Short.MAX_VALUE)))
+                    .addComponent(jRadioButton5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(question2)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton6)
+                    .addComponent(jRadioButton7)
+                    .addComponent(jRadioButton8)
+                    .addComponent(jRadioButton9)
+                    .addComponent(jRadioButton10))
+                .addGap(18, 18, 18)
+                .addComponent(question3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton11)
+                    .addComponent(jRadioButton12)
+                    .addComponent(jRadioButton13)
+                    .addComponent(jRadioButton14)
+                    .addComponent(jRadioButton15))
+                .addGap(18, 18, 18)
+                .addComponent(question4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton16)
+                    .addComponent(jRadioButton17)
+                    .addComponent(jRadioButton18)
+                    .addComponent(jRadioButton19)
+                    .addComponent(jRadioButton20))
+                .addGap(18, 18, 18)
+                .addComponent(question5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton21)
+                    .addComponent(jRadioButton22)
+                    .addComponent(jRadioButton23)
+                    .addComponent(jRadioButton24)
+                    .addComponent(jRadioButton25))
+                .addGap(18, 18, 18)
+                .addComponent(question6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton26)
+                    .addComponent(jRadioButton27)
+                    .addComponent(jRadioButton28)
+                    .addComponent(jRadioButton29)
+                    .addComponent(jRadioButton30))
+                .addGap(18, 18, 18)
+                .addComponent(question7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton31)
+                    .addComponent(jRadioButton32)
+                    .addComponent(jRadioButton33)
+                    .addComponent(jRadioButton34)
+                    .addComponent(jRadioButton35))
+                .addGap(24, 24, 24)
+                .addComponent(question8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton36)
+                    .addComponent(jRadioButton37)
+                    .addComponent(jRadioButton38)
+                    .addComponent(jRadioButton39)
+                    .addComponent(jRadioButton40))
+                .addGap(18, 18, 18)
+                .addComponent(question9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton41)
+                    .addComponent(jRadioButton42)
+                    .addComponent(jRadioButton43)
+                    .addComponent(jRadioButton44)
+                    .addComponent(jRadioButton45))
+                .addGap(18, 18, 18)
+                .addComponent(question10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton46)
+                    .addComponent(jRadioButton47)
+                    .addComponent(jRadioButton48)
+                    .addComponent(jRadioButton49)
+                    .addComponent(jRadioButton50))
+                .addGap(18, 18, 18)
+                .addComponent(question11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton51)
+                    .addComponent(jRadioButton52)
+                    .addComponent(jRadioButton53)
+                    .addComponent(jRadioButton54)
+                    .addComponent(jRadioButton55))
+                .addGap(18, 18, 18)
+                .addComponent(question12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton56)
+                    .addComponent(jRadioButton57)
+                    .addComponent(jRadioButton58)
+                    .addComponent(jRadioButton59)
+                    .addComponent(jRadioButton60))
+                .addGap(18, 18, 18)
+                .addComponent(question13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton61)
+                    .addComponent(jRadioButton62)
+                    .addComponent(jRadioButton63)
+                    .addComponent(jRadioButton64)
+                    .addComponent(jRadioButton65))
+                .addGap(18, 18, 18)
+                .addComponent(question14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton66)
+                    .addComponent(jRadioButton67)
+                    .addComponent(jRadioButton68)
+                    .addComponent(jRadioButton69)
+                    .addComponent(jRadioButton70))
+                .addGap(18, 18, 18)
+                .addComponent(FreeResponse1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(FreeResponse2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(489, Short.MAX_VALUE))
         );
+
+        jScrollPane1.setViewportView(jPanel2);
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 3, 24)); // NOI18N
+        jLabel1.setText("Student Evaluation of Instructors");
+
+        beginBtn.setText("Begin SEI");
+        beginBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                beginBtnActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Submit");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,24 +904,35 @@ public class SEIFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(beginBtn)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
                 .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(17, 17, 17)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(18, 18, 18)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 516, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(87, 87, 87)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(116, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(beginBtn)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
 
         pack();
@@ -192,15 +940,133 @@ public class SEIFrame extends javax.swing.JFrame {
 
     private void beginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beginBtnActionPerformed
         // TODO add your handling code here:
-        
         jPanel2.setVisible(true);
         question1.setText(questions.get(0));
+        question2.setText(questions.get(1));
+        question3.setText(questions.get(2));
+        question4.setText(questions.get(3));
+        question5.setText(questions.get(4));
+        question6.setText(questions.get(5));
+        question7.setText(questions.get(6));
+        question8.setText(questions.get(7));
+        question9.setText(questions.get(8));
+        question10.setText(questions.get(9));
+        question11.setText(questions.get(10));
+        question12.setText(questions.get(11));
+        question13.setText(questions.get(12));
+        question14.setText(questions.get(13));
+        FreeResponse1.setText(questions.get(2));
+        FreeResponse2.setText(questions.get(2));
+
+
         
     }//GEN-LAST:event_beginBtnActionPerformed
 
     private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton8ActionPerformed
+
+    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton13ActionPerformed
+
+    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton18ActionPerformed
+
+    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton17ActionPerformed
+
+    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton22ActionPerformed
+
+    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton23ActionPerformed
+
+    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton27ActionPerformed
+
+    private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton28ActionPerformed
+
+    private void jRadioButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton32ActionPerformed
+
+    private void jRadioButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton33ActionPerformed
+
+    private void jRadioButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton37ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton37ActionPerformed
+
+    private void jRadioButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton38ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton38ActionPerformed
+
+    private void jRadioButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton42ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton42ActionPerformed
+
+    private void jRadioButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton43ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton43ActionPerformed
+
+    private void jRadioButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton47ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton47ActionPerformed
+
+    private void jRadioButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton48ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton48ActionPerformed
+
+    private void jRadioButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton52ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton52ActionPerformed
+
+    private void jRadioButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton53ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton53ActionPerformed
+
+    private void jRadioButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton57ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton57ActionPerformed
+
+    private void jRadioButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton58ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton58ActionPerformed
+
+    private void jRadioButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton62ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton62ActionPerformed
+
+    private void jRadioButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton63ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton63ActionPerformed
+
+    private void jRadioButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton67ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton67ActionPerformed
+
+    private void jRadioButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton68ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton68ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        jPanel2.setVisible(false);
+        jScrollPane1.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,16 +1133,115 @@ public class SEIFrame extends javax.swing.JFrame {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel FreeResponse1;
+    private javax.swing.JLabel FreeResponse2;
     private javax.swing.JButton beginBtn;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup10;
+    private javax.swing.ButtonGroup buttonGroup11;
+    private javax.swing.ButtonGroup buttonGroup12;
+    private javax.swing.ButtonGroup buttonGroup13;
+    private javax.swing.ButtonGroup buttonGroup14;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
+    private javax.swing.ButtonGroup buttonGroup8;
+    private javax.swing.ButtonGroup buttonGroup9;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton12;
+    private javax.swing.JRadioButton jRadioButton13;
+    private javax.swing.JRadioButton jRadioButton14;
+    private javax.swing.JRadioButton jRadioButton15;
+    private javax.swing.JRadioButton jRadioButton16;
+    private javax.swing.JRadioButton jRadioButton17;
+    private javax.swing.JRadioButton jRadioButton18;
+    private javax.swing.JRadioButton jRadioButton19;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton20;
+    private javax.swing.JRadioButton jRadioButton21;
+    private javax.swing.JRadioButton jRadioButton22;
+    private javax.swing.JRadioButton jRadioButton23;
+    private javax.swing.JRadioButton jRadioButton24;
+    private javax.swing.JRadioButton jRadioButton25;
+    private javax.swing.JRadioButton jRadioButton26;
+    private javax.swing.JRadioButton jRadioButton27;
+    private javax.swing.JRadioButton jRadioButton28;
+    private javax.swing.JRadioButton jRadioButton29;
     private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton30;
+    private javax.swing.JRadioButton jRadioButton31;
+    private javax.swing.JRadioButton jRadioButton32;
+    private javax.swing.JRadioButton jRadioButton33;
+    private javax.swing.JRadioButton jRadioButton34;
+    private javax.swing.JRadioButton jRadioButton35;
+    private javax.swing.JRadioButton jRadioButton36;
+    private javax.swing.JRadioButton jRadioButton37;
+    private javax.swing.JRadioButton jRadioButton38;
+    private javax.swing.JRadioButton jRadioButton39;
     private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton40;
+    private javax.swing.JRadioButton jRadioButton41;
+    private javax.swing.JRadioButton jRadioButton42;
+    private javax.swing.JRadioButton jRadioButton43;
+    private javax.swing.JRadioButton jRadioButton44;
+    private javax.swing.JRadioButton jRadioButton45;
+    private javax.swing.JRadioButton jRadioButton46;
+    private javax.swing.JRadioButton jRadioButton47;
+    private javax.swing.JRadioButton jRadioButton48;
+    private javax.swing.JRadioButton jRadioButton49;
     private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton50;
+    private javax.swing.JRadioButton jRadioButton51;
+    private javax.swing.JRadioButton jRadioButton52;
+    private javax.swing.JRadioButton jRadioButton53;
+    private javax.swing.JRadioButton jRadioButton54;
+    private javax.swing.JRadioButton jRadioButton55;
+    private javax.swing.JRadioButton jRadioButton56;
+    private javax.swing.JRadioButton jRadioButton57;
+    private javax.swing.JRadioButton jRadioButton58;
+    private javax.swing.JRadioButton jRadioButton59;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton60;
+    private javax.swing.JRadioButton jRadioButton61;
+    private javax.swing.JRadioButton jRadioButton62;
+    private javax.swing.JRadioButton jRadioButton63;
+    private javax.swing.JRadioButton jRadioButton64;
+    private javax.swing.JRadioButton jRadioButton65;
+    private javax.swing.JRadioButton jRadioButton66;
+    private javax.swing.JRadioButton jRadioButton67;
+    private javax.swing.JRadioButton jRadioButton68;
+    private javax.swing.JRadioButton jRadioButton69;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton70;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel question1;
+    private javax.swing.JLabel question10;
+    private javax.swing.JLabel question11;
+    private javax.swing.JLabel question12;
+    private javax.swing.JLabel question13;
+    private javax.swing.JLabel question14;
+    private javax.swing.JLabel question2;
+    private javax.swing.JLabel question3;
+    private javax.swing.JLabel question4;
+    private javax.swing.JLabel question5;
+    private javax.swing.JLabel question6;
+    private javax.swing.JLabel question7;
+    private javax.swing.JLabel question8;
+    private javax.swing.JLabel question9;
     // End of variables declaration//GEN-END:variables
 }
