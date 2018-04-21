@@ -38,6 +38,10 @@ public class AdminFrame extends javax.swing.JFrame {
         initComponents();
         valid = false;
         successLabel.setVisible(false);
+        timeSuccessLbl.setVisible(false);
+        timePanel.setVisible(false);
+        emailPanel.setVisible(false);
+        emailSuccessLbl.setVisible(false);
         
         try{
             socket = new Socket("localhost",32345);
@@ -66,12 +70,28 @@ public class AdminFrame extends javax.swing.JFrame {
         adminWelcomeTxtLabel = new javax.swing.JLabel();
         searchStudRespBtn = new javax.swing.JButton();
         viewResultsBtn = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        setOpenCloseBtn = new javax.swing.JButton();
+        timePanel = new javax.swing.JPanel();
+        openDateField = new javax.swing.JTextField();
+        openDateLbl = new javax.swing.JLabel();
+        openTimeField = new javax.swing.JTextField();
+        closeDateLbl = new javax.swing.JLabel();
+        closeDateField = new javax.swing.JTextField();
+        closeTimeField = new javax.swing.JTextField();
+        sbmtOpClBtn = new javax.swing.JButton();
+        timeSuccessLbl = new javax.swing.JLabel();
+        qPanel = new javax.swing.JPanel();
         addQSEIBtn = new javax.swing.JButton();
         DisableQBtn = new javax.swing.JButton();
         qListPane = new javax.swing.JScrollPane();
         qListBox = new javax.swing.JList<>();
         successLabel = new javax.swing.JLabel();
+        sendEmailBtn = new javax.swing.JButton();
+        emailPanel = new javax.swing.JPanel();
+        emailChoices = new javax.swing.JComboBox<>();
+        emailSelLbl = new javax.swing.JLabel();
+        subEmailBtn = new javax.swing.JButton();
+        emailSuccessLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,6 +100,75 @@ public class AdminFrame extends javax.swing.JFrame {
         searchStudRespBtn.setText("Search for Student Responses");
 
         viewResultsBtn.setText("View Results");
+
+        setOpenCloseBtn.setText("Set Default Open/Close Time");
+        setOpenCloseBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                setOpenCloseBtnActionPerformed(evt);
+            }
+        });
+
+        openDateField.setText("MM/DD/YYYY");
+
+        openDateLbl.setText("Open Date and Time");
+
+        openTimeField.setText("00:00:00 AM/PM");
+
+        closeDateLbl.setText("Close Date and Time");
+
+        closeDateField.setText("MM/DD/YYYY");
+
+        closeTimeField.setText("00:00:00 AM/PM");
+
+        sbmtOpClBtn.setText("Submit");
+        sbmtOpClBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sbmtOpClBtnActionPerformed(evt);
+            }
+        });
+
+        timeSuccessLbl.setText("Success!");
+
+        javax.swing.GroupLayout timePanelLayout = new javax.swing.GroupLayout(timePanel);
+        timePanel.setLayout(timePanelLayout);
+        timePanelLayout.setHorizontalGroup(
+            timePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(timePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(timePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(timePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(openDateField)
+                        .addComponent(openDateLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(openTimeField, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                        .addComponent(closeDateLbl)
+                        .addComponent(closeDateField)
+                        .addComponent(closeTimeField))
+                    .addGroup(timePanelLayout.createSequentialGroup()
+                        .addComponent(sbmtOpClBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(timeSuccessLbl)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        timePanelLayout.setVerticalGroup(
+            timePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(timePanelLayout.createSequentialGroup()
+                .addComponent(openDateLbl)
+                .addGap(9, 9, 9)
+                .addComponent(openDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(openTimeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(closeDateLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(closeDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(closeTimeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(timePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sbmtOpClBtn)
+                    .addComponent(timeSuccessLbl))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         addQSEIBtn.setText("Select Questions for SEI");
         addQSEIBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -99,11 +188,11 @@ public class AdminFrame extends javax.swing.JFrame {
 
         successLabel.setText("Success!");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout qPanelLayout = new javax.swing.GroupLayout(qPanel);
+        qPanel.setLayout(qPanelLayout);
+        qPanelLayout.setHorizontalGroup(
+            qPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(qPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(DisableQBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
                 .addGap(13, 13, 13)
@@ -113,20 +202,73 @@ public class AdminFrame extends javax.swing.JFrame {
                 .addContainerGap())
             .addComponent(qListPane)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        qPanelLayout.setVerticalGroup(
+            qPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, qPanelLayout.createSequentialGroup()
                 .addComponent(qListPane, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(qPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(qPanelLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(qPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(DisableQBtn)
                             .addComponent(addQSEIBtn)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(qPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(successLabel)))
                 .addContainerGap())
+        );
+
+        sendEmailBtn.setText("Send Email Reminders");
+        sendEmailBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sendEmailBtnActionPerformed(evt);
+            }
+        });
+
+        emailChoices.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Faculty to Create SEI", "Faculty to View Results", "Students to Complete SEIs" }));
+        emailChoices.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailChoicesActionPerformed(evt);
+            }
+        });
+
+        emailSelLbl.setText("Select what set of emails to send out.");
+
+        subEmailBtn.setText("Send Email");
+        subEmailBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subEmailBtnActionPerformed(evt);
+            }
+        });
+
+        emailSuccessLbl.setText("Success!");
+
+        javax.swing.GroupLayout emailPanelLayout = new javax.swing.GroupLayout(emailPanel);
+        emailPanel.setLayout(emailPanelLayout);
+        emailPanelLayout.setHorizontalGroup(
+            emailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(emailPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(emailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(emailSelLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(emailPanelLayout.createSequentialGroup()
+                        .addComponent(subEmailBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(emailSuccessLbl))
+                    .addComponent(emailChoices, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        emailPanelLayout.setVerticalGroup(
+            emailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(emailPanelLayout.createSequentialGroup()
+                .addComponent(emailSelLbl)
+                .addGap(5, 5, 5)
+                .addComponent(emailChoices, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(emailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(subEmailBtn)
+                    .addComponent(emailSuccessLbl))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout adminPanelLayout = new javax.swing.GroupLayout(adminPanel);
@@ -135,27 +277,39 @@ public class AdminFrame extends javax.swing.JFrame {
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(adminWelcomeTxtLabel)
+                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(adminWelcomeTxtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(setOpenCloseBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(viewResultsBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(searchStudRespBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(searchStudRespBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(timePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sendEmailBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(qPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         adminPanelLayout.setVerticalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(adminWelcomeTxtLabel)
-                .addGap(74, 74, 74)
-                .addComponent(searchStudRespBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(viewResultsBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(adminPanelLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, adminPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(adminWelcomeTxtLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(searchStudRespBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(viewResultsBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(setOpenCloseBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sendEmailBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(timePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(emailPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(qPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -210,6 +364,30 @@ public class AdminFrame extends javax.swing.JFrame {
             outWriter.flush();
         }
     }//GEN-LAST:event_DisableQBtnActionPerformed
+
+    private void setOpenCloseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setOpenCloseBtnActionPerformed
+        // TODO add your handling code here:
+        timePanel.setVisible(true);
+    }//GEN-LAST:event_setOpenCloseBtnActionPerformed
+
+    private void sbmtOpClBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbmtOpClBtnActionPerformed
+        // TODO add your handling code here:
+        timeSuccessLbl.setVisible(true);
+    }//GEN-LAST:event_sbmtOpClBtnActionPerformed
+
+    private void emailChoicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailChoicesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailChoicesActionPerformed
+
+    private void sendEmailBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendEmailBtnActionPerformed
+        // TODO add your handling code here:
+        emailPanel.setVisible(true);
+    }//GEN-LAST:event_sendEmailBtnActionPerformed
+
+    private void subEmailBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subEmailBtnActionPerformed
+        // TODO add your handling code here:
+        emailSuccessLbl.setVisible(true);
+    }//GEN-LAST:event_subEmailBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,7 +457,7 @@ public class AdminFrame extends javax.swing.JFrame {
         
         private void processCommand(String inString){
                 if(inString.startsWith("/returnQList")) addToList(inString.split(";"));
-                else if(inString.startsWith("/addSEI")) {
+                else if(inString.startsWith("/retFromSEI")) {
                     addQSEIBtn.setVisible(false);
                     successLabel.setVisible(true);
                     try {
@@ -305,12 +483,28 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JButton addQSEIBtn;
     private javax.swing.JPanel adminPanel;
     private javax.swing.JLabel adminWelcomeTxtLabel;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField closeDateField;
+    private javax.swing.JLabel closeDateLbl;
+    private javax.swing.JTextField closeTimeField;
+    private javax.swing.JComboBox<String> emailChoices;
+    private javax.swing.JPanel emailPanel;
+    private javax.swing.JLabel emailSelLbl;
+    private javax.swing.JLabel emailSuccessLbl;
+    private javax.swing.JTextField openDateField;
+    private javax.swing.JLabel openDateLbl;
+    private javax.swing.JTextField openTimeField;
     private javax.swing.JList<String> qListBox;
     private javax.swing.JScrollPane qListPane;
+    private javax.swing.JPanel qPanel;
     private javax.swing.ButtonGroup qTypeGroup;
+    private javax.swing.JButton sbmtOpClBtn;
     private javax.swing.JButton searchStudRespBtn;
+    private javax.swing.JButton sendEmailBtn;
+    private javax.swing.JButton setOpenCloseBtn;
+    private javax.swing.JButton subEmailBtn;
     private javax.swing.JLabel successLabel;
+    private javax.swing.JPanel timePanel;
+    private javax.swing.JLabel timeSuccessLbl;
     private javax.swing.JButton viewResultsBtn;
     // End of variables declaration//GEN-END:variables
 }

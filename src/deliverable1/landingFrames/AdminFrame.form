@@ -52,15 +52,19 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="adminWelcomeTxtLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="adminWelcomeTxtLabel" alignment="0" max="32767" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="setOpenCloseBtn" alignment="0" max="32767" attributes="0"/>
                           <Component id="viewResultsBtn" alignment="0" max="32767" attributes="0"/>
                           <Component id="searchStudRespBtn" alignment="0" max="32767" attributes="0"/>
                       </Group>
+                      <Component id="timePanel" max="32767" attributes="0"/>
+                      <Component id="sendEmailBtn" min="-2" pref="179" max="-2" attributes="0"/>
+                      <Component id="emailPanel" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="qPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="32" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -68,16 +72,25 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="adminWelcomeTxtLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                  <Component id="searchStudRespBtn" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="viewResultsBtn" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="adminWelcomeTxtLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="searchStudRespBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="viewResultsBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="setOpenCloseBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="sendEmailBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="timePanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="emailPanel" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="qPanel" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -99,7 +112,111 @@
             <Property name="text" type="java.lang.String" value="View Results"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Component class="javax.swing.JButton" name="setOpenCloseBtn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Set Default Open/Close Time"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="setOpenCloseBtnActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JPanel" name="timePanel">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="openDateField" max="32767" attributes="0"/>
+                              <Component id="openDateLbl" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="openTimeField" alignment="0" pref="221" max="32767" attributes="0"/>
+                              <Component id="closeDateLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="closeDateField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="closeTimeField" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="sbmtOpClBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="timeSuccessLbl" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="openDateLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Component id="openDateField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="openTimeField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="closeDateLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="closeDateField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="closeTimeField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="sbmtOpClBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="timeSuccessLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="openDateField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="MM/DD/YYYY"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="openDateLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Open Date and Time"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="openTimeField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="00:00:00 AM/PM"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="closeDateLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Close Date and Time"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="closeDateField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="MM/DD/YYYY"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="closeTimeField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="00:00:00 AM/PM"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="sbmtOpClBtn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Submit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sbmtOpClBtnActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="timeSuccessLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Success!"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="qPanel">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -175,6 +292,88 @@
               </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="successLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Success!"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="sendEmailBtn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Send Email Reminders"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sendEmailBtnActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JPanel" name="emailPanel">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="emailSelLbl" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="subEmailBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="emailSuccessLbl" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="emailChoices" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="emailSelLbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                      <Component id="emailChoices" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="subEmailBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="emailSuccessLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JComboBox" name="emailChoices">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Faculty to Create SEI"/>
+                    <StringItem index="1" value="Faculty to View Results"/>
+                    <StringItem index="2" value="Students to Complete SEIs"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailChoicesActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="emailSelLbl">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Select what set of emails to send out."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="subEmailBtn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Send Email"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="subEmailBtnActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="emailSuccessLbl">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Success!"/>
               </Properties>
