@@ -117,7 +117,7 @@ public class ClientHandler extends Thread{
                 System.err.println("Adding to SEI");
                 server.sei.addQuestion(stringarray[i]);
             }
-            outWriter.println("/addSEI,success");
+            outWriter.println("/retFromSEI,success");
             outWriter.flush();
         }
         else if(stringarray[0].equals("/disableQ")) {

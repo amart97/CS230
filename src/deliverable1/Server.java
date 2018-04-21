@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class Server extends Thread{
     Boolean running = true;
     ArrayList<ClientHandler> clientList = new ArrayList();
+    ArrayList<String> responses = new ArrayList();
     QuestionPool qPool = new QuestionPool();
     SEI sei = new SEI();
     
