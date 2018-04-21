@@ -40,6 +40,7 @@ public class AdminFrame extends javax.swing.JFrame {
         successLabel.setVisible(false);
         timeSuccessLbl.setVisible(false);
         timePanel.setVisible(false);
+        searchRespPanel.setVisible(false);
         emailPanel.setVisible(false);
         emailSuccessLbl.setVisible(false);
         
@@ -92,14 +93,28 @@ public class AdminFrame extends javax.swing.JFrame {
         emailSelLbl = new javax.swing.JLabel();
         subEmailBtn = new javax.swing.JButton();
         emailSuccessLbl = new javax.swing.JLabel();
+        searchRespPanel = new javax.swing.JPanel();
+        studNameLbl = new javax.swing.JLabel();
+        studNameField = new javax.swing.JTextField();
+        searchRespBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         adminWelcomeTxtLabel.setText("College of Monongalia County SEI System - OFFICIAL ADMINISTRATOR USE ONLY");
 
         searchStudRespBtn.setText("Search for Student Responses");
+        searchStudRespBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchStudRespBtnActionPerformed(evt);
+            }
+        });
 
         viewResultsBtn.setText("View Results");
+        viewResultsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewResultsBtnActionPerformed(evt);
+            }
+        });
 
         setOpenCloseBtn.setText("Set Default Open/Close Time");
         setOpenCloseBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -271,24 +286,65 @@ public class AdminFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        studNameLbl.setText("Enter Student's Name.");
+
+        studNameField.setText("Student Name");
+
+        searchRespBtn.setText("Search");
+        searchRespBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchRespBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout searchRespPanelLayout = new javax.swing.GroupLayout(searchRespPanel);
+        searchRespPanel.setLayout(searchRespPanelLayout);
+        searchRespPanelLayout.setHorizontalGroup(
+            searchRespPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(searchRespPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(searchRespPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(studNameField)
+                    .addGroup(searchRespPanelLayout.createSequentialGroup()
+                        .addGroup(searchRespPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(studNameLbl)
+                            .addComponent(searchRespBtn))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        searchRespPanelLayout.setVerticalGroup(
+            searchRespPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(searchRespPanelLayout.createSequentialGroup()
+                .addComponent(studNameLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(studNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchRespBtn)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout adminPanelLayout = new javax.swing.GroupLayout(adminPanel);
         adminPanel.setLayout(adminPanelLayout);
         adminPanelLayout.setHorizontalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(adminWelcomeTxtLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(setOpenCloseBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(viewResultsBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(searchStudRespBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(timePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(sendEmailBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(emailPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(adminPanelLayout.createSequentialGroup()
+                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(setOpenCloseBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(viewResultsBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(searchStudRespBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(sendEmailBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addComponent(searchRespPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(qPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGap(32, 32, 32))
         );
         adminPanelLayout.setVerticalGroup(
             adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,13 +354,16 @@ public class AdminFrame extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(adminWelcomeTxtLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(searchStudRespBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(viewResultsBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(setOpenCloseBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sendEmailBtn)
+                        .addGroup(adminPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(adminPanelLayout.createSequentialGroup()
+                                .addComponent(searchStudRespBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(viewResultsBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(setOpenCloseBtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sendEmailBtn))
+                            .addComponent(searchRespPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(timePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -388,6 +447,21 @@ public class AdminFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         emailSuccessLbl.setVisible(true);
     }//GEN-LAST:event_subEmailBtnActionPerformed
+
+    private void searchStudRespBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchStudRespBtnActionPerformed
+        // TODO add your handling code here:
+        searchRespPanel.setVisible(true);
+    }//GEN-LAST:event_searchStudRespBtnActionPerformed
+
+    private void searchRespBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchRespBtnActionPerformed
+        // TODO add your handling code here:
+        new RawResultsFrame(1).setVisible(true);
+    }//GEN-LAST:event_searchRespBtnActionPerformed
+
+    private void viewResultsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewResultsBtnActionPerformed
+        // TODO add your handling code here:
+        new AdminResultsFrame().setVisible(true);
+    }//GEN-LAST:event_viewResultsBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -498,9 +572,13 @@ public class AdminFrame extends javax.swing.JFrame {
     private javax.swing.JPanel qPanel;
     private javax.swing.ButtonGroup qTypeGroup;
     private javax.swing.JButton sbmtOpClBtn;
+    private javax.swing.JButton searchRespBtn;
+    private javax.swing.JPanel searchRespPanel;
     private javax.swing.JButton searchStudRespBtn;
     private javax.swing.JButton sendEmailBtn;
     private javax.swing.JButton setOpenCloseBtn;
+    private javax.swing.JTextField studNameField;
+    private javax.swing.JLabel studNameLbl;
     private javax.swing.JButton subEmailBtn;
     private javax.swing.JLabel successLabel;
     private javax.swing.JPanel timePanel;
