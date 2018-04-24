@@ -148,6 +148,11 @@ public class DeanFrame extends javax.swing.JFrame {
         });
 
         viewResultsBtn.setText("View Results");
+        viewResultsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewResultsBtnActionPerformed(evt);
+            }
+        });
 
         qListPane.setViewportView(qListBox);
 
@@ -356,6 +361,11 @@ public class DeanFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         emailPanel.setVisible(true);
     }//GEN-LAST:event_sendEmailBtnActionPerformed
+
+    private void viewResultsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewResultsBtnActionPerformed
+        // TODO add your handling code here:
+        new DeanResultsFrame().setVisible(true);
+    }//GEN-LAST:event_viewResultsBtnActionPerformed
 
     /**
      * @param args the command line arguments

@@ -20,8 +20,8 @@ public class SEI {
     
     public SEI() {
         this.SEI = new ArrayList<String>();
-        this.SEI.add("Please provide comments / constructive feedback for the course as a whole.");
-        this.SEI.add("Please provide comments / constructive feedback for the instructor.");
+        this.SEI.add("What was your favorite thing about the course?");
+        this.SEI.add("Please provide comments / constructive feedback for the instructor/course.");
         this.SEI.add("I expect to pass this class.");
         this.SEI.add("I spent an appopriate amount of time outside of class preparing for exams.");
         this.SEI.add("Pre-requisites for this class prepared me for the class.");

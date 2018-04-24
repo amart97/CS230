@@ -121,6 +121,11 @@ public class FacultyFrame extends javax.swing.JFrame {
         });
 
         viewResultsPanel.setText("View Results");
+        viewResultsPanel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewResultsPanelActionPerformed(evt);
+            }
+        });
 
         submitSelectedQBtn.setText("Submit Question Choices");
         submitSelectedQBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -529,6 +534,12 @@ public class FacultyFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         emailPanel.setVisible(true);
     }//GEN-LAST:event_sendEmailBtnActionPerformed
+
+    private void viewResultsPanelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewResultsPanelActionPerformed
+        // TODO add your handling code here:
+        new FacultyResultsFrame().setVisible(true);
+        new RawResultsFrame(0).setVisible(true);
+    }//GEN-LAST:event_viewResultsPanelActionPerformed
 
     /**
      * @param args the command line arguments
